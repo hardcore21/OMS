@@ -1,0 +1,23 @@
+version: "3.9"                                             #version of docker-compose
+services:
+    mysql:
+      container_name: mysql
+      image: mysql:5.7.41-oracle
+      ports:
+        - "3306:3306"
+        - "33060:33060"
+      expose:
+        # Opens port 3306 on the container
+        - "3306"
+        - "33060"
+      environment:
+        - MYSQL_DATABASE=lv316oms                          #DB name in OMS project
+        - MYSQL_ROOT_PASSWORD=root                         #default password of the MySQL container
+      #volumes:
+        #- ./scripts/mysql:/var/lib/mysql                   #database data volume
+        #- ./scripts:/docker-entrypoint-initdb.d/:ro        #database files called when the container is built and started for the first time
+    web:
+      container_name: tomcat
+      build: .
+      ports:
+        - "8080:8080"

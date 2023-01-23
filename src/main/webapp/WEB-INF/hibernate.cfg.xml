@@ -20,11 +20,11 @@
 		<property name="hibernate.connection.username">db207</property>
 		<property name="hibernate.connection.password">db207</property>
  -->
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/lv316oms</property>
+		<property name="hibernate.connection.url">jdbc:mysql://192.168.0.105:3306/lv316oms</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
  
-		<!-- property name="hibernate.hbm2ddl.auto">create</property>  -->
+		<property name="hibernate.hbm2ddl.auto">create</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
 		<!-- <property name="show_sql">true</property> <property name="format_sql">true</property> -->
