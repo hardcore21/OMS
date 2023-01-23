@@ -13,8 +13,8 @@ services:
       environment:
         - MYSQL_DATABASE=lv316oms                          #DB name in OMS project
         - MYSQL_ROOT_PASSWORD=root                         #default password of the MySQL container
-      volumes:
-        - ./scripts/mysql:/var/lib/mysql                   #database data volume
+      #volumes:
+        #- ./scripts/mysql:/var/lib/mysql                   #database data volume
         #- ./scripts:/docker-entrypoint-initdb.d/:ro        #database files called when the container is built and started for the first time
     web:
       container_name: tomcat
